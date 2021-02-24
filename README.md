@@ -1,2 +1,2 @@
 # Trajectory
-Simplistic trajectory planner for end effectors
+Simple trajectory planner for end effectors
