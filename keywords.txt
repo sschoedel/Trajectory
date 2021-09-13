@@ -1,0 +1,26 @@
+#######################################
+# Syntax Coloring Map Servo
+#######################################
+
+#######################################
+# Classes (KEYWORD1)
+#######################################
+
+Trajectory	KEYWORD1	Trajectory
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+interpolate KEYWORD2
+getTrajectoryPoints KEYWORD2
+getCurrentTrajectoryPoints  KEYWORD2
+clearTrajectory KEYWORD2
+printSubPoints  KEYWORD2    printSubPoints
+step    KEYWORD2
+
+#######################################
+# Structs (KEYWORD3)
+#######################################
+
+Vector3 KEYWORD3    Vector3
