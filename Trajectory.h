@@ -17,17 +17,22 @@ typedef struct _Vector3 Vector3;
 class Trajectory
 {
     public:
-        Trajectory();
-        interpolate(float x1, float x2, float y1, float y2, float z1, float z2, int subPoints);
-        getTrajectoryPoint(int index);
-        clearTrajectory();
-
+        Trajectory(const int max_trajectory_points);
+        void interpolate(float x1, float x2, float y1, float y2, float z1, float z2, int subPoints);
+        Vector3 getTrajectoryPoint(int index);
+        Vector3 getCurrentTrajectoryPoint();
+        void setTrajectoryPoint(int index, float x, float y, float z);
+        void setCurrentTrajectoryPoint(float x, float y, float z);
+        void clearTrajectory();
+        void printSubPoints();
+        void step();
+        bool trajectoryComplete;
     private:
-        int MAX_SUBPOINTS = 200;
-        float xPoints[MAX_SUBPOINTS] = {};
-        float yPoints[MAX_SUBPOINTS] = {};
-        float zPoints[MAX_SUBPOINTS] = {};
+        int MAX_SUBPOINTS;
+        Vector3 * points;
         Vector3 trajectoryPoint;
+        int _currTrajectoryPoint;
+        int _subPoints;
 };
 
 #endif
